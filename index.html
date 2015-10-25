@@ -1,0 +1,75 @@
+<!doctype html>
+<script src="code/game.js"></script>
+<script src="code/game_levels.js"></script>
+
+<link rel="stylesheet" href="css/game.css">
+
+<body>
+
+<audio id ="song1">
+	<source src="audio/Giving Up and Moving On.mp3" type="audio/mpeg">
+</audio>
+<audio id ="song2">
+	<source src="audio/Swept Away.mp3" type="audio/mpeg">
+</audio>
+<audio id ="song3">
+	<source src="audio/When Night Calls.mp3" type="audio/mpeg">
+</audio>
+<audio id ="song4">
+	<source src="audio/Free Runner.mp3" type="audio/mpeg">
+</audio>
+<audio id ="song5">
+	<source src="audio/I'm Out.mp3" type="audio/mpeg">
+</audio>
+
+
+
+
+
+
+
+<script>
+var sound1 = document.getElementById("song1");
+	sound1.volume = 0.8;
+var sound2 = document.getElementById("song2");
+	sound2.volume = 0.8;
+var sound3 = document.getElementById("song3");
+	sound3.volume = 0.8;
+var sound4 = document.getElementById("song4");
+	sound4.volume = 0.8;
+var sound5 = document.getElementById("song5");
+	sound5.volume = 0.8;
+
+sound1.play();
+
+sound1.onended = function(){
+	sound2.play();
+}
+sound2.onended = function(){
+	sound3.play();
+}
+sound3.onended = function(){
+	sound4.play();
+}
+sound4.onended = function(){
+	sound5.play();
+}
+sound5.onended = function(){
+	sound1.play();
+}
+
+
+
+
+
+
+
+
+
+	
+	
+	
+runGame(GAME_LEVELS, DOMDisplay);
+
+</script>
+</body>
